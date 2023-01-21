@@ -1,12 +1,16 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "This creates a professional readme for the user",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrughK/Pro-README-Generator.git"
+  },
+  "author": "Kasen Brugh",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"

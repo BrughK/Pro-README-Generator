@@ -31,8 +31,15 @@ const questions = [
         name: 'contributing',
       },
       {
+        type: 'input', 
+        message: 'Provide information about running tests',
+        name: 'test',
+      }, 
+      {
         type: 'list', 
-        choices: ['Apache 2.0','BSD 3-Clause', 'GNU GPL v3', 'GNU GPL v2', 'GNU AGPL v3', 'GNU LGPL v3', 'GNU FDL v1.3', 'IBM Public License Version 1.0'],
+        choices: ['Apache 2.0', 'GNU GPL v3',  'MIT License', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New"',
+        'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 
+        'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'Mozilla Public License 2.0', 'The Unlicense',],
         name: 'license',
       },
       {
@@ -62,7 +69,7 @@ inquirer.prompt(questions).then((data) => {
         github: `${data.github}`,
     })
     // make the data
-    fs.writeFile('README.md', markdown, (err) => {
+    fs.writeFile('README.md', mkDown, (err) => {
         if (err) {
             console.log(err); 
         } else {
